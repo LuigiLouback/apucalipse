@@ -1,0 +1,1689 @@
+fileFormatVersion: 2
+guid: 3745f4388213fb243aed0acf708fa4bd
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 145
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904dd1b99730b2946956f5a8189fcf6c
+      internalID: 831290755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 145
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1dd538162527a64cabb0776c046cf5e
+      internalID: -1581793372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 145
+        width: 7
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde6835a4592e2c41abc15bd1a2d9223
+      internalID: 1438668051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 145
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93e2fec751c0784d994c065c04ed883
+      internalID: 1491187468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 145
+        width: 11
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4da5bfb55fc335e4b95c33d118dfb6a1
+      internalID: -383035473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 145
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109ff988a30a45e47b802b2bd9f549b3
+      internalID: -2066418991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 147
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9bc6731d7f9a0f46a500965dae835dd
+      internalID: 678414017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 147
+        width: 23
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcfe9f7a691aac3449fb92e5100b83ab
+      internalID: 898450874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 131
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22e86a34e2e46e3469701af6b048bfe5
+      internalID: -1257486879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 131
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c11ac488273ec8348b97506768288ef2
+      internalID: -1593661792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 130
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afff8a72930dfdb469867219e14e059f
+      internalID: -1148875813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 130
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439313abd14b6834399acc2927b8be8c
+      internalID: -853582964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 130
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 327a26142a5e262469b95e56dd8f3160
+      internalID: 82796310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 130
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d81cc183008bbc042978bc500f87e3ab
+      internalID: 1995321259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 130
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950eec419c1bd634fb4b0954590a3eb7
+      internalID: 848667538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 130
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4e5bda2e7e3e31478c623edf93c9cfe
+      internalID: -1490979194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 130
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b23f2242cb2a5e43a722c2386094786
+      internalID: -604614000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 115
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e24c0ec2b75854a81d7f1d2877aaa6
+      internalID: 1934844564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 115
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dcc33753300fae46a05202fb8772c70
+      internalID: 568675688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 114
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50a1712c4cd88654d9524a7e869c2a37
+      internalID: 1054502340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 114
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f33d00c1bfee21448cf96306d2d0f20
+      internalID: -1693466154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 114
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cccf7ab3a338f4fa3c3e0413b595cc
+      internalID: 827399602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 114
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c491c415c5bb4f4e9b48959d583b5cf
+      internalID: 1659706559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 114
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c064cc66114004e8b866035b83ec51
+      internalID: -285482031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 114
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a51bfca7c927d41bc1ce9d9d45c705
+      internalID: -558565601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 114
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7752be7526d664c4d8866a8051e815b0
+      internalID: 393290221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 99
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea5c0dbd151c60746b9615dc89907ce7
+      internalID: -230620911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 99
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdf9464bcda13674a99190a7e9f86fe1
+      internalID: -1866896313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 98
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c830a63be54ed804d961fefcd82ae64f
+      internalID: -260304362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 98
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47b5ed81167109144943ef3f65184dcc
+      internalID: 456099847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 98
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ad91f466bd9a944980e95ceccd322c
+      internalID: -2067024253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 98
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d967912475ae242a34608c1a88f5a3
+      internalID: -1138087377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 98
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 821bc76d8a2f6784f908cde253ca7a62
+      internalID: 2078072070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 98
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9103283e340c3ba4d92165f028528286
+      internalID: -218819019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 98
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86400b4a1d1516f4aa98bddaceb2da2e
+      internalID: 942362959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 83
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 350f828d6e43c7c4cafa5b68d1bcb03f
+      internalID: -754541856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 83
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2774edb56209fba42bdbf96c91abf5cc
+      internalID: -1288056849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 82
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a7005ff1e5ab6246832b971f73c8abc
+      internalID: 1534962669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 82
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56e7f3025c3fd754c85bb05773c7c722
+      internalID: 1648035983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 82
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182576131b2661d42b7fe989ab5d1f22
+      internalID: 295092636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 82
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0757cca54d4d13d4c874675f58494feb
+      internalID: -325506755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 82
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a40ddbdbd5b974cafa8c603c89993e
+      internalID: 548235623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 82
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9886eec5350e6cd4faa9c557d97c3c4d
+      internalID: 346855248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_43
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 82
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a30cce231a09f7a46b75df3e8c0dea64
+      internalID: 1415703365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_44
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 67
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f1a5a54d8d7a694b8f8b1aa9a980ffd
+      internalID: -1758840818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_45
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 67
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486f2915a16562b49aeae435fc8296dc
+      internalID: 1696794428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_46
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 66
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad33dff87b4320e4bb45c41bdcf1c8f9
+      internalID: 122165343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_47
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 66
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bba5706961d6b54493828682b1d25f7
+      internalID: 375811175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_48
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 66
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 415c7eec75fed9444a00019f7693fd06
+      internalID: -120324848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_49
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 66
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bec3427ab142f84a8a94cc2fcd901b6
+      internalID: 183317971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_50
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 66
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9baa9fa86db41e43b27d0a4c84078c3
+      internalID: -1525829183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_51
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 66
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8692d9e0e67d4a48a03b52ef85f52c4
+      internalID: 1629446188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_52
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 66
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e1464ba4e925d49bcd1b83be82c5fe
+      internalID: 1392957253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_53
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 51
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef89fc4a80d15164a9a53780c9f6f08c
+      internalID: 1598528384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_54
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 51
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3eb7594f60e234497daf7ae260d4a8
+      internalID: -1272102521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_55
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 50
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70d4d1678e7fe1445b9de82d6aab668b
+      internalID: 1689958300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_56
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 50
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ce4eec66f0919a4b901665d16766b3c
+      internalID: -544940032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_57
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 50
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa0fc45a0380da6478d336bc81c5a6a9
+      internalID: 470068113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_58
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 50
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f2a07eb6c584649865a5fb088e00a2
+      internalID: 142264923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_59
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 50
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d21e19d2194ea40812869b0ada7583
+      internalID: -1727702703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_60
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 50
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b45a54f5a803224cbadcb470fd95e86
+      internalID: -1670887645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_61
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 50
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7bc644b5a768d34db543ff2e40170f4
+      internalID: 2078366598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_62
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 35
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb78f505102d09b4582970ee58da2a5e
+      internalID: -1713971229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_63
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 35
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5be373292f8275646a5f7d044ac71ff7
+      internalID: -2095224727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_64
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 34
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15b4b0bbe8c493f4da135e05f24b1c26
+      internalID: 1225046589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_65
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 19
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3641c99bf4b2a6d4fbadaf3ec4bee927
+      internalID: -1052365977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_66
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 19
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8c57e16513f31a45b455ab39beddb67
+      internalID: 1552944191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_67
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 18
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 031611bbab9dbfa40824499078865689
+      internalID: 592690525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_68
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 3
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c3cf0ed3ff84c4ba542464e73ba814
+      internalID: 643067972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_69
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 3
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92511e2aec9337b4bbb7cb37576e3fe2
+      internalID: -189356767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pigeon Sprite Sheet_70
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2
+        width: 11
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d86d29f54f436064a91f17357cbba4b5
+      internalID: -593261056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pigeon Sprite Sheet_0: 831290755
+      Pigeon Sprite Sheet_1: -1581793372
+      Pigeon Sprite Sheet_10: -1148875813
+      Pigeon Sprite Sheet_11: -853582964
+      Pigeon Sprite Sheet_12: 82796310
+      Pigeon Sprite Sheet_13: 1995321259
+      Pigeon Sprite Sheet_14: 848667538
+      Pigeon Sprite Sheet_15: -1490979194
+      Pigeon Sprite Sheet_16: -604614000
+      Pigeon Sprite Sheet_17: 1934844564
+      Pigeon Sprite Sheet_18: 568675688
+      Pigeon Sprite Sheet_19: 1054502340
+      Pigeon Sprite Sheet_2: 1438668051
+      Pigeon Sprite Sheet_20: -1693466154
+      Pigeon Sprite Sheet_21: 827399602
+      Pigeon Sprite Sheet_22: 1659706559
+      Pigeon Sprite Sheet_23: -285482031
+      Pigeon Sprite Sheet_24: -558565601
+      Pigeon Sprite Sheet_25: 393290221
+      Pigeon Sprite Sheet_26: -230620911
+      Pigeon Sprite Sheet_27: -1866896313
+      Pigeon Sprite Sheet_28: -260304362
+      Pigeon Sprite Sheet_29: 456099847
+      Pigeon Sprite Sheet_3: 1491187468
+      Pigeon Sprite Sheet_30: -2067024253
+      Pigeon Sprite Sheet_31: -1138087377
+      Pigeon Sprite Sheet_32: 2078072070
+      Pigeon Sprite Sheet_33: -218819019
+      Pigeon Sprite Sheet_34: 942362959
+      Pigeon Sprite Sheet_35: -754541856
+      Pigeon Sprite Sheet_36: -1288056849
+      Pigeon Sprite Sheet_37: 1534962669
+      Pigeon Sprite Sheet_38: 1648035983
+      Pigeon Sprite Sheet_39: 295092636
+      Pigeon Sprite Sheet_4: -383035473
+      Pigeon Sprite Sheet_40: -325506755
+      Pigeon Sprite Sheet_41: 548235623
+      Pigeon Sprite Sheet_42: 346855248
+      Pigeon Sprite Sheet_43: 1415703365
+      Pigeon Sprite Sheet_44: -1758840818
+      Pigeon Sprite Sheet_45: 1696794428
+      Pigeon Sprite Sheet_46: 122165343
+      Pigeon Sprite Sheet_47: 375811175
+      Pigeon Sprite Sheet_48: -120324848
+      Pigeon Sprite Sheet_49: 183317971
+      Pigeon Sprite Sheet_5: -2066418991
+      Pigeon Sprite Sheet_50: -1525829183
+      Pigeon Sprite Sheet_51: 1629446188
+      Pigeon Sprite Sheet_52: 1392957253
+      Pigeon Sprite Sheet_53: 1598528384
+      Pigeon Sprite Sheet_54: -1272102521
+      Pigeon Sprite Sheet_55: 1689958300
+      Pigeon Sprite Sheet_56: -544940032
+      Pigeon Sprite Sheet_57: 470068113
+      Pigeon Sprite Sheet_58: 142264923
+      Pigeon Sprite Sheet_59: -1727702703
+      Pigeon Sprite Sheet_6: 678414017
+      Pigeon Sprite Sheet_60: -1670887645
+      Pigeon Sprite Sheet_61: 2078366598
+      Pigeon Sprite Sheet_62: -1713971229
+      Pigeon Sprite Sheet_63: -2095224727
+      Pigeon Sprite Sheet_64: 1225046589
+      Pigeon Sprite Sheet_65: -1052365977
+      Pigeon Sprite Sheet_66: 1552944191
+      Pigeon Sprite Sheet_67: 592690525
+      Pigeon Sprite Sheet_68: 643067972
+      Pigeon Sprite Sheet_69: -189356767
+      Pigeon Sprite Sheet_7: 898450874
+      Pigeon Sprite Sheet_70: -593261056
+      Pigeon Sprite Sheet_8: -1257486879
+      Pigeon Sprite Sheet_9: -1593661792
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
