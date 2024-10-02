@@ -44,6 +44,9 @@ TagManager:
   - name: background
     uniqueID: 1764236163
     locked: 0
+  - name: collision
+    uniqueID: 2283326093
+    locked: 0
   - name: actor front
     uniqueID: 490772173
     locked: 0

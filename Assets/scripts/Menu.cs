@@ -9,4 +9,12 @@ public class Menu : MonoBehaviour
     {   
         SceneManager.LoadSceneAsync(scene);
     }
+
+    public void Quit(){
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
+    }
 }
