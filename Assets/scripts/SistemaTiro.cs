@@ -22,7 +22,9 @@ public class SistemaTiro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+       
         mousePosi = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        
     }
    
     private void FixedUpdate()

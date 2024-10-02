@@ -47,3 +47,6 @@ TagManager:
   - name: actor front
     uniqueID: 490772173
     locked: 0
+  - name: frentetudo
+    uniqueID: 1590186135
+    locked: 0
