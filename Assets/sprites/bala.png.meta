@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 22b4fe0a7ef640745a9c1d49d5b5f859
+guid: ab50573b8dcf2c0499aaf99d6e606589
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bullets-Sheet_0
+      name: bala_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 6
-        width: 7
-        height: 4
+        x: 7
+        y: 5
+        width: 4
+        height: 7
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40e290f78bf5f8f47ab4ee6217ae1330
-      internalID: 2016680590
+      spriteID: 254fc106977357e4db1c36debd22ebbf
+      internalID: 447443545
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullets-Sheet_1
+      name: bala_1
       rect:
         serializedVersion: 2
         x: 21
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 17a4d1d9d9585a949bfe391967e93a0a
-      internalID: -964814285
+      spriteID: 5246d0c77e570ce4fb842b8ac2e56739
+      internalID: 783158289
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullets-Sheet_2
+      name: bala_2
       rect:
         serializedVersion: 2
         x: 37
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88bfdf0c76b104d4d9b547c88e670bb5
-      internalID: -524176594
+      spriteID: 4fd4e9478bd90e74391b4a8b23c01e49
+      internalID: 88581633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: bullets-Sheet_3
+      name: bala_3
       rect:
         serializedVersion: 2
         x: 53
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 74c2cee0dcddf934a87292388a2305bc
-      internalID: 1409748460
+      spriteID: 355bd20e388cc084a85270f4a1b0d4a0
+      internalID: -1740481460
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      bullets-Sheet_0: 2016680590
-      bullets-Sheet_1: -964814285
-      bullets-Sheet_2: -524176594
-      bullets-Sheet_3: 1409748460
+      bala_0: 447443545
+      bala_1: 783158289
+      bala_2: 88581633
+      bala_3: -1740481460
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

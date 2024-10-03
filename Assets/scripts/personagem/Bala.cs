@@ -18,4 +18,12 @@ public class Bala : MonoBehaviour
     {
         transform.Translate(transform.up*speed*Time.fixedDeltaTime,Space.World);
     }
+   
+   public void OnTriggerEnter2D(Collider2D collider)
+    {
+        if(collider.CompareTag("Inimigo")){
+            Destroy(collider.gameObject);
+            Destroy(this.gameObject);
+        }
+    }
 }
