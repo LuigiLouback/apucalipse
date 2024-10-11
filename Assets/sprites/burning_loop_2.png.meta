@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f033ffe36e82c240b9fc39118689212
+guid: 53900c4d35c6c8b4db5b25773314a486
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,261 +110,169 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Trees_0
+      name: burning_loop_2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 257
-        width: 48
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 3, y: -47}
-        - {x: -1, y: -45}
-        - {x: -6, y: -46}
-        - {x: -7, y: -44}
-        - {x: -8, y: -41}
-        - {x: -6, y: -39}
-        - {x: -8, y: -37}
-        - {x: -7, y: -34}
-        - {x: -1, y: -32}
-        - {x: 6, y: -35}
-        - {x: 8, y: -38}
-        - {x: 5, y: -41}
-        - {x: 6, y: -44}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36b6b46db6932084f9eb2799be815654
-      internalID: -1281637012
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_1
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 224
-        width: 72
-        height: 124
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 5
+        y: 0
+        width: 11
+        height: 15
+      alignment: 9
+      pivot: {x: 0.49999973, y: 0.07985503}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9429c4c9394ed6e4fa9119d690e926df
-      internalID: -568858044
+      spriteID: 8382be96690641542bda13345a435e33
+      internalID: -1210665775
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_2
+      name: burning_loop_2_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 226
-        width: 105
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 09fb9c94dba18984ebb6735c0d328c9b
-      internalID: -904412517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 129
-        width: 48
-        height: 94
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 71}
-      outline: []
-      physicsShape:
-      - - {x: 3, y: -47}
-        - {x: -1, y: -45}
-        - {x: -8, y: -46}
-        - {x: -6, y: -39}
-        - {x: -8, y: -36}
-        - {x: -1, y: -34}
-        - {x: 7, y: -36}
-        - {x: 8, y: -39}
-        - {x: 5, y: -41}
-        - {x: 6, y: -45}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0012c1cf5a8d8be438a46551f46ef9a1
-      internalID: 1599205301
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_4
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 64
-        width: 80
-        height: 156
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 32, z: 0, w: 0}
-      outline: []
-      physicsShape:
-      - - {x: 0, y: -46}
-        - {x: -10, y: -43}
-        - {x: -10, y: -35}
-        - {x: 0, y: -33}
-        - {x: 9, y: -37}
-        - {x: 11, y: -44}
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a44248f5fec2b0418c45d1bafd8cd31
-      internalID: -243986511
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_5
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 98
-        width: 105
-        height: 126
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6481761228bd9f3488852d1158ff61e9
-      internalID: 1444849537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Trees_6
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 108
-        width: 48
+        x: 25
+        y: 0
+        width: 10
         height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.50940573, y: 0.059082862}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1fa38157a36d9af41a711e0e22a41319
-      internalID: -215039344
+      spriteID: 2523713ccc878e345aa95724fa622885
+      internalID: 2096215712
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_7
+      name: burning_loop_2_2
       rect:
         serializedVersion: 2
-        x: 8
-        y: 79
-        width: 32
+        x: 46
+        y: 0
+        width: 8
+        height: 18
+      alignment: 9
+      pivot: {x: 0.5117569, y: 0.04536564}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7539834f1476ed41b425867dc609cba
+      internalID: -509332279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_3
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 9
         height: 14
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.4999983, y: 0.06328224}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a21dcd81f551241b02cf6e609a14a9
-      internalID: -549782628
+      spriteID: 0209fe3fb61ee6f48ba85c3776405aec
+      internalID: -43119380
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Trees_8
+      name: burning_loop_2_4
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 186
-        height: 63
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 85
+        y: 0
+        width: 10
+        height: 15
+      alignment: 9
+      pivot: {x: 0.509404, y: 0.07985503}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1fe54430b291494c816bdc3cf85371a
-      internalID: -275676964
+      spriteID: 5d143cb27d3986343bd96d476c45b681
+      internalID: -1674833121
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: troco
+      name: burning_loop_2_5
       rect:
         serializedVersion: 2
-        x: 0
-        y: 130
-        width: 48
-        height: 23
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 106
+        y: 0
+        width: 9
+        height: 17
+      alignment: 9
+      pivot: {x: 0.5104497, y: 0.06288678}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8772c985ff10a34c9fd7c1f429d0464
-      internalID: 1279202075
+      spriteID: d6154684b1b9e3b449ff0f383182643e
+      internalID: -1963238795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: copa
+      name: burning_loop_2_6
       rect:
         serializedVersion: 2
-        x: 0
-        y: 151
-        width: 48
-        height: 74
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 126
+        y: 0
+        width: 9
+        height: 16
+      alignment: 9
+      pivot: {x: 0.52090114, y: 0.07084065}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ca9e8515c30e74f498441b9e219276f7
-      internalID: -1374023705
+      spriteID: 228c0792546e03b4ab86a86781d45b90
+      internalID: -1712585299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: burning_loop_2_7
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 0
+        width: 10
+        height: 18
+      alignment: 9
+      pivot: {x: 0.4811859, y: 0.06626837}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b6fad0049880f4e9033f4242996deb
+      internalID: 2015324444
       vertices: []
       indices: 
       edges: []
@@ -380,17 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Trees_0: -1281637012
-      Trees_1: -568858044
-      Trees_2: -904412517
-      Trees_3: 1599205301
-      Trees_4: -243986511
-      Trees_5: 1444849537
-      Trees_6: -215039344
-      Trees_7: -549782628
-      Trees_8: -275676964
-      copa: -1374023705
-      troco: 1279202075
+      burning_loop_2_0: -1210665775
+      burning_loop_2_1: 2096215712
+      burning_loop_2_2: -509332279
+      burning_loop_2_3: -43119380
+      burning_loop_2_4: -1674833121
+      burning_loop_2_5: -1963238795
+      burning_loop_2_6: -1712585299
+      burning_loop_2_7: 2015324444
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
