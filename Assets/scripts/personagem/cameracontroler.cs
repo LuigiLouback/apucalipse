@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cameracontroler : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
-    public Transform target;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public Transform target; // O personagem que a câmera segue
+    public float minX, maxX, minY, maxY; // Limites do mapa
 
-    // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(target.transform.position.x,target.transform.position.y,transform.position.z);
+        // Pega a posição desejada da câmera
+        float targetX = Mathf.Clamp(target.transform.position.x, minX, maxX);
+        float targetY = Mathf.Clamp(target.transform.position.y, minY, maxY);
+
+        // Ajusta a posição da câmera, sem ultrapassar os limites
+        transform.position = new Vector3(targetX, targetY, transform.position.z);
     }
 }
