@@ -48,4 +48,5 @@ public class InimigoPombo : MonoBehaviour
             anim.SetBool("movendo", false);
         }
     }
+
 }

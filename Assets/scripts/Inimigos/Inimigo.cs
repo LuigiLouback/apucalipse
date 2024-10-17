@@ -15,6 +15,7 @@ public class Inimigo : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponentInChildren<Animator>();
         rigidbody = GetComponent<Rigidbody2D>(); // Inicialize o Rigidbody2D
+
     }
 
     // Update is called once per frame
@@ -48,4 +49,5 @@ public class Inimigo : MonoBehaviour
             anim.SetBool("movendo", false);
         }
     }
+
 }

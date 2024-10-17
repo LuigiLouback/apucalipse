@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SistemaVida : MonoBehaviour
 {
@@ -26,8 +27,7 @@ public class SistemaVida : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Inimigo"))
         {
-            Debug.Log("oi");
-            PerderVida(10); // Ajuste o valor de dano conforme necessário
+            PerderVida(5); // Ajuste o valor de dano conforme necessário
         }
     }
 
@@ -39,6 +39,13 @@ public class SistemaVida : MonoBehaviour
         if (vida <= 0)
         {
             vida = 0;
+            GameOver();
         }
+    }
+
+    void GameOver()
+    {
+        Debug.Log("Game Over");
+        SceneManager.LoadScene("GameOver");
     }
 }
