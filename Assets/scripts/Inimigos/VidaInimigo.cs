@@ -7,10 +7,20 @@ public class VidaInimigo : MonoBehaviour
     public float vidaInimigo; // Vida do inimigo
     public int xpRecompensa; // XP que o jogador ganha ao matar o inimigo
 
+    [SerializeField] private ParticleSystem particulasDano; // Partículas para mostrar o dano
+
     // Função para aplicar dano ao inimigo
     public void PerderVida(float dano)
     {
         vidaInimigo -= dano;
+
+       
+      
+
+        
+            particulasDano.transform.position = transform.position; // Garantir que as partículas apareçam no inimigo
+            particulasDano.Play();
+        
 
         // Verifica se a vida do inimigo chegou a zero ou abaixo
         if (vidaInimigo <= 0)
