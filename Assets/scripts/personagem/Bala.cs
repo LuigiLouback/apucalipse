@@ -7,6 +7,8 @@ public class Bala : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float tempoDeVida;
 
+    public float dano = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,11 +23,6 @@ public class Bala : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Inimigo"))
-        {
-            Destroy(collision.gameObject); 
-             
-        }
         Destroy(this.gameObject);
     }
 

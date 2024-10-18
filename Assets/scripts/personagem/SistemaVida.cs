@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro; 
 using UnityEngine.SceneManagement;
 
 public class SistemaVida : MonoBehaviour
@@ -9,29 +10,24 @@ public class SistemaVida : MonoBehaviour
     public float vida;
     public float vidaMax;
 
-    public Image healthBar;
+    // Referências ao Slider e TextMeshProUGUI
+    public Slider healthSlider;
+    public TextMeshProUGUI vidaTexto; // TextMeshPro para exibir a vida
 
     // Start is called before the first frame update
     void Start()
     {
         vidaMax = vida;
+        AtualizarSlider();
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.fillAmount = Mathf.Clamp(vida / vidaMax, 0, 1);
+        AtualizarSlider();
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Inimigo"))
-        {
-            PerderVida(5); // Ajuste o valor de dano conforme necessário
-        }
-    }
-
-    void PerderVida(float dano)
+    public void PerderVida(float dano)
     {
         vida -= dano;
 
@@ -41,6 +37,15 @@ public class SistemaVida : MonoBehaviour
             vida = 0;
             GameOver();
         }
+
+        AtualizarSlider();
+    }
+
+    void AtualizarSlider()
+    {
+        // Atualiza o valor do slider e o texto de vida
+        healthSlider.value = Mathf.Clamp(vida / vidaMax, 0, 1);
+        vidaTexto.text = $"{vida} / {vidaMax}";
     }
 
     void GameOver()
@@ -49,3 +54,5 @@ public class SistemaVida : MonoBehaviour
         SceneManager.LoadScene("GameOver");
     }
 }
+
+

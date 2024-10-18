@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2757068713274792261}
   - component: {fileID: 6565764273482118800}
   - component: {fileID: 1794941481797806690}
+  - component: {fileID: 4040453422981792032}
+  - component: {fileID: 7754778925698815179}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Inimigo
@@ -222,3 +224,31 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!114 &4040453422981792032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996432804383845371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87b173b219b42744790ba23684447abf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dano: 10
+  tempoEntreAtaques: 0.5
+--- !u!114 &7754778925698815179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996432804383845371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8a2daf213d7cd94f8e5c194161589da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vidaInimigo: 10
+  xpRecompensa: 10
