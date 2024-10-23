@@ -18,9 +18,19 @@ public class SistemaNivel : MonoBehaviour
     public Jogador jogador;
     public SistemaVida sistemaVida;
 
+    public VidaInimigo vidaInimigoZ;
+    public VidaInimigo vidaInimigoP;
+
+    public Bala bala;
+
     public GameObject escolhaNivelUI;
     public Button aumentarVidaButton;
     public Button aumentarVelocidadeButton;
+    public Button recuperarVidaButton;
+
+    public Button aumentarGanhoXp;
+
+    public Button aumentarDano;
 
     void Start()
     {
@@ -65,20 +75,51 @@ public class SistemaNivel : MonoBehaviour
 
         aumentarVelocidadeButton.onClick.RemoveAllListeners();
         aumentarVelocidadeButton.onClick.AddListener(AumentarVelocidade);
+
+        recuperarVidaButton.onClick.RemoveAllListeners();
+        recuperarVidaButton.onClick.AddListener(RecuperarVida);
+
+        aumentarGanhoXp.onClick.RemoveAllListeners();
+        aumentarGanhoXp.onClick.AddListener(AumentarXp);
+
+        aumentarDano.onClick.RemoveAllListeners();
+        aumentarDano.onClick.AddListener(AumentarDano);
     }
 
     void AumentarVida()
     {
         sistemaVida.vidaMax += aumentoVida;
-        sistemaVida.vida += aumentoVida; // Recupera a vida total ao aumentar a vida máxima
-        escolhaNivelUI.SetActive(false); // Esconder a UI de escolha de nível
+        sistemaVida.vida += aumentoVida;
+        escolhaNivelUI.SetActive(false);
         Time.timeScale = 1;
     }
 
     void AumentarVelocidade()
     {
         jogador.velocidadeMovimento += aumentoVelocidade;
-        escolhaNivelUI.SetActive(false); // Esconder a UI de escolha de nível
+        escolhaNivelUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    void RecuperarVida()
+    {
+        sistemaVida.vida = sistemaVida.vidaMax;
+        escolhaNivelUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    void AumentarXp()
+    {
+        vidaInimigoZ.xpRecompensa += 1;
+        vidaInimigoP.xpRecompensa += 1;
+        escolhaNivelUI.SetActive(false);
+        Time.timeScale = 1;
+    }
+
+    void AumentarDano()
+    {
+        bala.dano += 5f;
+        escolhaNivelUI.SetActive(false);
         Time.timeScale = 1;
     }
 
