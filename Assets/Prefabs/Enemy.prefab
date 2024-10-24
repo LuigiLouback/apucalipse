@@ -255,7 +255,6 @@ MonoBehaviour:
   vidaInimigo: 30
   xpRecompensa: 10
   particulasDano: {fileID: -5455454929327864533}
-  particulasMorte: {fileID: 3426807595234910794, guid: d1e06174232075247b3695cc7f581a20, type: 3}
 --- !u!198 &-5455454929327864533
 ParticleSystem:
   m_ObjectHideFlags: 0

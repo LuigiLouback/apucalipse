@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Inimigo
   - Bullet
+  - areaAtaque
   layers:
   - Default
   - TransparentFX
