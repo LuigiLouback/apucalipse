@@ -4,25 +4,42 @@ using System.Collections.Generic;
 
 public class Pathfinding : MonoBehaviour
 {
-    public Transform seeker, target;
+    public Transform seeker; // Mantemos apenas o seeker para o ponto inicial
     public Grid grid;
+    public Transform target; // Definimos o target como um campo privado
 
     void Awake()
     {
-        if (grid == null)
-        {
-            grid = FindObjectOfType<Grid>(); // Encontre o Grid na cena
-            if (grid == null)
-            {
-                Debug.LogError("Grid não encontrado! Certifique-se de que o objeto Grid está presente na cena.");
-                return;
-            }
-        }
+        grid = GetComponent<Grid>();
+         if (grid == null)
+    {
+        Debug.Log("Grid component not found on this GameObject!");
+    }
     }
 
     void Update()
     {
-        if (seeker != null && target != null)
+        // Busca o jogador com a tag "Player" se ainda não foi definido
+        if (target == null)
+        {
+            GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
+            if (playerObject != null)
+            {
+                target = playerObject.transform; 
+                Debug.Log("Player found and target set.");// Define o Transform do jogador como alvo
+            }
+             else
+        {
+            Debug.Log("Player object not found.");
+        }
+        }
+    if (seeker == null)
+    {
+        Debug.Log("Seeker is not set. Please assign it in the Inspector.");
+        
+    }
+        // Se o alvo for encontrado, calcular o caminho
+        if (target != null)
         {
             FindPath(seeker.position, target.position);
         }
@@ -30,20 +47,8 @@ public class Pathfinding : MonoBehaviour
 
     public void FindPath(Vector3 startPos, Vector3 targetPos)
     {
-        if (grid == null)
-        {
-            Debug.LogError("Grid está nulo no método FindPath!");
-            return;
-        }
-
         Node startNode = grid.NodeFromWorldPoint(startPos);
         Node targetNode = grid.NodeFromWorldPoint(targetPos);
-
-        if (startNode == null || targetNode == null)
-        {
-            Debug.LogError("Nós inicializados como nulos no FindPath. Certifique-se de que os pontos estão dentro da área do Grid.");
-            return;
-        }
 
         List<Node> openSet = new List<Node>();
         HashSet<Node> closedSet = new HashSet<Node>();
@@ -103,14 +108,7 @@ public class Pathfinding : MonoBehaviour
         }
         path.Reverse();
 
-        if (grid != null)
-        {
-            grid.path = path;
-        }
-        else
-        {
-            Debug.LogError("Grid está nulo ao retracear o caminho.");
-        }
+        grid.path = path;
     }
 
     int GetDistance(Node nodeA, Node nodeB)
