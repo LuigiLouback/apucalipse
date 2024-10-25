@@ -1342,7 +1342,7 @@ GameObject:
   - component: {fileID: 190289568}
   - component: {fileID: 190289567}
   - component: {fileID: 190289569}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1472,7 +1472,7 @@ GameObject:
   - component: {fileID: 233639112}
   - component: {fileID: 233639114}
   - component: {fileID: 233639113}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: casa (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1653,7 +1653,7 @@ GameObject:
   - component: {fileID: 266452612}
   - component: {fileID: 266452611}
   - component: {fileID: 266452613}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: casa2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2140,7 +2140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 440525777}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: estuturas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4218,7 +4218,7 @@ GameObject:
   - component: {fileID: 932002330}
   - component: {fileID: 932002329}
   - component: {fileID: 932002331}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: casa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36631,7 +36631,9 @@ GameObject:
   - component: {fileID: 1057621480}
   - component: {fileID: 1057621482}
   - component: {fileID: 1057621481}
-  m_Layer: 0
+  - component: {fileID: 1057621484}
+  - component: {fileID: 1057621483}
+  m_Layer: 7
   m_Name: collision
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40950,6 +40952,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1057621483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057621476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fb6984a0ca144a43a1fc1d5caa80b2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unwalkableMask:
+    serializedVersion: 2
+    m_Bits: 128
+  gridWorldSize: {x: 100, y: 50}
+  nodeRadius: 0.3
+--- !u!114 &1057621484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1057621476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711d86233dba76b489347ccc3bf6a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeker: {fileID: 5165485158855327672, guid: de703055f8b8b3643af8d8f4ba559dea, type: 3}
+  grid: {fileID: 1057621483}
+  target: {fileID: 1178872853}
 --- !u!1 &1085867532
 GameObject:
   m_ObjectHideFlags: 0
@@ -40961,7 +40995,7 @@ GameObject:
   - component: {fileID: 1085867534}
   - component: {fileID: 1085867533}
   - component: {fileID: 1085867535}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41091,7 +41125,7 @@ GameObject:
   - component: {fileID: 1086966040}
   - component: {fileID: 1086966039}
   - component: {fileID: 1086966041}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio2 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41364,7 +41398,7 @@ GameObject:
   - component: {fileID: 1137874928}
   - component: {fileID: 1137874927}
   - component: {fileID: 1137874929}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio11 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42012,7 +42046,7 @@ GameObject:
   - component: {fileID: 1281646239}
   - component: {fileID: 1281646241}
   - component: {fileID: 1281646240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio2 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47779,7 +47813,7 @@ GameObject:
   - component: {fileID: 1504606489}
   - component: {fileID: 1504606491}
   - component: {fileID: 1504606490}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio2 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48761,7 +48795,7 @@ GameObject:
   - component: {fileID: 1748499205}
   - component: {fileID: 1748499207}
   - component: {fileID: 1748499206}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: predio11 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

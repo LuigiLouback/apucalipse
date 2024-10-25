@@ -6,11 +6,15 @@ public class Pathfinding : MonoBehaviour
 {
     public Transform seeker; // Mantemos apenas o seeker para o ponto inicial
     public Grid grid;
-    private Transform target; // Definimos o target como um campo privado
+    public Transform target; // Definimos o target como um campo privado
 
     void Awake()
     {
         grid = GetComponent<Grid>();
+         if (grid == null)
+    {
+        Debug.Log("Grid component not found on this GameObject!");
+    }
     }
 
     void Update()
@@ -21,10 +25,19 @@ public class Pathfinding : MonoBehaviour
             GameObject playerObject = GameObject.FindGameObjectWithTag("Player");
             if (playerObject != null)
             {
-                target = playerObject.transform; // Define o Transform do jogador como alvo
+                target = playerObject.transform; 
+                Debug.Log("Player found and target set.");// Define o Transform do jogador como alvo
             }
+             else
+        {
+            Debug.Log("Player object not found.");
         }
-
+        }
+    if (seeker == null)
+    {
+        Debug.Log("Seeker is not set. Please assign it in the Inspector.");
+        
+    }
         // Se o alvo for encontrado, calcular o caminho
         if (target != null)
         {

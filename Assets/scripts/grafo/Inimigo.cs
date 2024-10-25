@@ -39,6 +39,7 @@ public class Inimigo : MonoBehaviour
     {
         if (player != null && path != null && path.Count > 0)
         {
+            
             // Move o inimigo ao longo do caminho
             Vector2 targetPosition = new Vector2(path[targetIndex].worldPosition.x, path[targetIndex].worldPosition.z);
             Vector2 newPosition = Vector2.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
