@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   seeker: {fileID: 5165485158855327672}
   grid: {fileID: 0}
+  target: {fileID: 0}
 --- !u!95 &2757068713274792261
 Animator:
   serializedVersion: 5
