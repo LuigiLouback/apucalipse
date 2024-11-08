@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5165485158855327672}
   - component: {fileID: 8361547981885098335}
-  - component: {fileID: 3232865743965059608}
+  - component: {fileID: -86061101370644481}
+  - component: {fileID: -8891879235643129628}
   - component: {fileID: 2757068713274792261}
   - component: {fileID: 6565764273482118800}
   - component: {fileID: 1794941481797806690}
@@ -67,7 +68,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &3232865743965059608
+--- !u!114 &-86061101370644481
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -79,8 +80,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a0fd803a6281e4a827743812074b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
   spriteRenderer: {fileID: 6565764273482118800}
+--- !u!114 &-8891879235643129628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996432804383845371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711d86233dba76b489347ccc3bf6a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeker: {fileID: 5165485158855327672}
+  target: {fileID: 0}
 --- !u!95 &2757068713274792261
 Animator:
   serializedVersion: 5
