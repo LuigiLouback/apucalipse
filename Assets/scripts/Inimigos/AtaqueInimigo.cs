@@ -7,6 +7,7 @@ public class AtaqueInimigo : MonoBehaviour
     public float dano; // Dano que o inimigo causa
     public float tempoEntreAtaques = 1f; // Tempo de espera entre os ataques
     private bool podeAtacar = true;
+    
 
     // Função que é chamada quando o inimigo colide com outro objeto
     void OnCollisionStay2D(Collision2D collision)
@@ -19,6 +20,7 @@ public class AtaqueInimigo : MonoBehaviour
             if (jogador != null)
             {
                 jogador.PerderVida(dano);
+               
                 StartCoroutine(EsperarProximoAtaque());
             }
         }

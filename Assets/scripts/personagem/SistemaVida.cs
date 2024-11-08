@@ -9,7 +9,8 @@ public class SistemaVida : MonoBehaviour
 {
     public float vida;
     public float vidaMax;
-
+   
+ [SerializeField] private ParticleSystem sangue;
     // Referências ao Slider e TextMeshProUGUI
     public Slider healthSlider;
     public TextMeshProUGUI vidaTexto; // TextMeshPro para exibir a vida
@@ -28,7 +29,9 @@ public class SistemaVida : MonoBehaviour
     }
 
     public void PerderVida(float dano)
+
     {
+        sangue.Play();
         vida -= dano;
 
         // Certifique-se de que a vida não fique negativa
