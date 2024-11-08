@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class GerenciadorSpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] private Transform[] spawnPoints; // Pontos de spawn
     [SerializeField] private GameObject enemy1; // Primeiro tipo de inimigo
     [SerializeField] private GameObject enemy2; // Segundo tipo de inimigo
@@ -21,6 +20,7 @@ public class GerenciadorSpawn : MonoBehaviour
 
         GameObject enemyToSpawn = (enemyIndex == 0) ? enemy1 : enemy2; // Escolhe o inimigo baseado no índice
 
-        Instantiate(enemyToSpawn, spawnPoints[index].position, Quaternion.identity); // Spawn do inimigo escolhido
+        // Spawn do inimigo escolhido no ponto de spawn selecionado
+        Instantiate(enemyToSpawn, spawnPoints[index].position, Quaternion.identity);
     }
 }
