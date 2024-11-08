@@ -6,7 +6,16 @@ public class Jogador : MonoBehaviour
 { 
     public Rigidbody2D rigidbody;
     public float velocidadeMovimento;
+    public static Transform PlayerTransform { get; private set; }
 
+    private void Awake()
+    {
+        // Garante que apenas um objeto PlayerManager seja carregado
+        if (PlayerTransform == null)
+        {
+            PlayerTransform = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+    }
     
     // Start is called before the first frame update
     void Start()

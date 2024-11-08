@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7993285605019004522}
   - component: {fileID: 591446478852572746}
+  - component: {fileID: -5197584818526096003}
+  - component: {fileID: 578942477283007338}
   - component: {fileID: 6562709262666079675}
   - component: {fileID: 2026595480012711813}
-  - component: {fileID: 5307662584900246324}
   - component: {fileID: -1630500354758392944}
   - component: {fileID: 5484041069309675858}
   - component: {fileID: 1972040414882181098}
@@ -92,6 +93,34 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-5197584818526096003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370046126565063945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14a0fd803a6281e4a827743812074b05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  spriteRenderer: {fileID: 591446478852572746}
+--- !u!114 &578942477283007338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370046126565063945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 711d86233dba76b489347ccc3bf6a240, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeker: {fileID: 7993285605019004522}
+  target: {fileID: 0}
 --- !u!50 &6562709262666079675
 Rigidbody2D:
   serializedVersion: 4
@@ -140,20 +169,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5307662584900246324
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7370046126565063945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d026f030b80d63943a80ce1624e7f9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  spriteRenderer: {fileID: 591446478852572746}
 --- !u!61 &-1630500354758392944
 BoxCollider2D:
   m_ObjectHideFlags: 0

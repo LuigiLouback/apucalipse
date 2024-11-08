@@ -7,21 +7,22 @@ public class Inimigo : MonoBehaviour
     [SerializeField] private float speed;
     private GameObject player;
     private Animator anim;
-    private Rigidbody2D rigidbody; // Rigidbody2D do inimigo
+    private Rigidbody2D rigidbody;
     [SerializeField] private SpriteRenderer spriteRenderer;
 
-    private Pathfinding pathfinding; // Referência ao componente Pathfinding
-    private List<Node> path; // Caminho até o jogador
-    private int targetIndex = 0; // Índice do nó atual do caminho
+    private Pathfinding pathfinding;
+    private List<Node> path;
+    private int targetIndex = 0;
 
     void Start()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
+        // Obtém a referência ao jogador através do Jogador
+        player = Jogador.PlayerTransform.gameObject;
         anim = GetComponentInChildren<Animator>();
-        rigidbody = GetComponent<Rigidbody2D>(); // Inicialize o Rigidbody2D
-        pathfinding = GetComponent<Pathfinding>(); // Inicialize o Pathfinding
+        rigidbody = GetComponent<Rigidbody2D>();
+        pathfinding = GetComponent<Pathfinding>();
 
-        InvokeRepeating("AtualizarCaminho", 0f, 0.5f); // Atualiza o caminho a cada 0.5 segundos
+        InvokeRepeating("AtualizarCaminho", 0f, 0.5f);
     }
 
     void AtualizarCaminho()
@@ -30,14 +31,14 @@ public class Inimigo : MonoBehaviour
         {
             Debug.Log("Atualizando caminho para o jogador...");
 
-            // Calcula o caminho até o jogador
+            // Usa o Pathfinding para calcular o caminho até o jogador
             pathfinding.FindPath(transform.position, player.transform.position);
-            path = pathfinding.grid.path;
+            path = GridManager.grid.path; // Obtém o caminho a partir do GridManager
 
             if (path != null && path.Count > 0)
             {
                 Debug.Log("Caminho encontrado com " + path.Count + " nós.");
-                targetIndex = 0; // Reseta o índice do alvo
+                targetIndex = 0;
             }
             else
             {
@@ -51,14 +52,14 @@ public class Inimigo : MonoBehaviour
         if (player != null && path != null && path.Count > 0)
         {
             Node currentNode = path[targetIndex];
-            Vector2 targetPosition = new Vector2(currentNode.worldPosition.x, currentNode.worldPosition.z);
+            Vector2 targetPosition = new Vector2(currentNode.worldPosition.x, currentNode.worldPosition.y); // Mudança para o eixo Y
             Vector2 currentPosition = rigidbody.position;
 
             // Move o inimigo ao longo do caminho
             Vector2 newPosition = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
             rigidbody.MovePosition(newPosition);
 
-            // Verificar se o inimigo alcançou o nó atual e atualizar o índice para o próximo nó
+            // Verifica se o inimigo alcançou o nó atual e atualiza o índice para o próximo nó
             if (Vector2.Distance(currentPosition, targetPosition) < 0.1f)
             {
                 Debug.Log("Alcançou o nó " + targetIndex);
@@ -66,29 +67,29 @@ public class Inimigo : MonoBehaviour
                 if (targetIndex >= path.Count)
                 {
                     Debug.Log("Caminho concluído!");
-                    path = null; // Caminho concluído
+                    path = null;
                 }
             }
 
             // Calcular a direção do movimento
             Vector2 direction = (player.transform.position - transform.position).normalized;
 
-            // Verificar se o inimigo está se movendo e ajustar a orientação do sprite
+            // Ajusta a orientação do sprite
             if (direction.x > 0)
             {
-                spriteRenderer.flipX = false; // Olha para a direita
+                spriteRenderer.flipX = false;
             }
             else if (direction.x < 0)
             {
-                spriteRenderer.flipX = true; // Olha para a esquerda
+                spriteRenderer.flipX = true;
             }
 
-            // Atualizar a animação
+            // Atualiza a animação
             anim.SetBool("movendo", true);
         }
         else
         {
-            // Parar a animação se não houver jogador ou caminho
+            // Para a animação se não houver jogador ou caminho
             anim.SetBool("movendo", false);
         }
     }
