@@ -12,6 +12,7 @@ public class Grid : MonoBehaviour
     int gridSizeX, gridSizeY; // Tamanho do grid em X e Y
 
     public List<Node> path; // Caminho atual
+ 
 
     void Awake()
     {
@@ -38,8 +39,9 @@ public class Grid : MonoBehaviour
                 // Calcula a posição do ponto no mundo para cada nó
                 Vector3 worldPoint = worldBottomLeft + Vector3.right * (x * nodeDiameter + nodeRadius) + Vector3.up * (y * nodeDiameter + nodeRadius);
                 // Verifica se o nó é "walkable" (se pode ser atravessado)
-                bool walkable = !(Physics.CheckSphere(worldPoint, nodeRadius, unwalkableMask));
+                bool walkable = !Physics2D.OverlapCircle(new Vector2(worldPoint.x, worldPoint.y), nodeRadius, unwalkableMask);
                 // Cria o nó no grid
+                Debug.Log($"Nó em {x}, {y} é {(walkable ? "andável" : "não andável")}");
                 grid[x, y] = new Node(walkable, worldPoint, x, y);
             }
         }
