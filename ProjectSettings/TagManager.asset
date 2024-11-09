@@ -7,6 +7,7 @@ TagManager:
   - Inimigo
   - Bullet
   - areaAtaque
+  - Audio
   layers:
   - Default
   - TransparentFX

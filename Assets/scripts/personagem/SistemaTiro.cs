@@ -17,6 +17,10 @@ public class SistemaTiro : MonoBehaviour
     [SerializeField] private float duracaoLuz = 1f; // Duração do flash
     [SerializeField] private float intensidadeFlash = 10; // Intensidade do flash momentâneo
     [SerializeField] private ParticleSystem particulasTiro; // Adicionado para partículas
+    Audiomanager audioManager;
+    private void Awake(){
+        audioManager=GameObject.FindGameObjectWithTag("Audio").GetComponent<Audiomanager>();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -65,7 +69,7 @@ public class SistemaTiro : MonoBehaviour
     private void Disparar()
     {
         Instantiate(tiro, pontoDeFogo.position, pontoDeFogo.rotation);
-
+        audioManager.PlaySFX(audioManager.audiotiro);
         // Ativar flash de luz
         if (luztiro != null)
         {

@@ -2808,11 +2808,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.32
+      value: 8.3
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -11.17
+      value: -11.7
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -54132,7 +54132,7 @@ GameObject:
   - component: {fileID: 1251271449}
   m_Layer: 0
   m_Name: audioManager
-  m_TagString: Untagged
+  m_TagString: Audio
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54150,11 +54150,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1701167592}
-  SFXSource: {fileID: 0}
+  SFXSource: {fileID: 1965422107}
   background: {fileID: 8300000, guid: 5d20f315845a436489dce0716bf939b2, type: 3}
   Hubbackground: {fileID: 0}
-  audiotiro: {fileID: 0}
-  audiozombie: {fileID: 0}
+  audiotiro: {fileID: 8300000, guid: 2203773368e4340d98c114f55c2dd7fd, type: 3}
+  audiozombie: {fileID: 8300000, guid: 9df77b70cadc8384ca073a95aebc666f, type: 3}
 --- !u!4 &1251271450
 Transform:
   m_ObjectHideFlags: 0
@@ -54190,11 +54190,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -26.27
+      value: -29.7
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.98
+      value: -9.8
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66278,7 +66278,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5d20f315845a436489dce0716bf939b2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.132
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -66395,11 +66395,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.41
+      value: -30.7
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.59
+      value: -0.8
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66805,7 +66805,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   gridWorldSize: {x: 80, y: 40}
-  nodeRadius: 0.5
+  nodeRadius: 0.7
 --- !u!1 &1879784979
 GameObject:
   m_ObjectHideFlags: 0
@@ -67257,7 +67257,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.114
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -72867,11 +72867,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.4
+      value: 9.1
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.49
+      value: 10.4
       objectReference: {fileID: 0}
     - target: {fileID: 7494750205378023780, guid: 7d6645839cb6dfb49a1e6fb8938c87dc, type: 3}
       propertyPath: m_LocalPosition.z
