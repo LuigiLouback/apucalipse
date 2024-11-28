@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InimigoAtualizado : MonoBehaviour
 {
-    [SerializeField] float speed;
+    public float speed;
     GameObject player;
     Animator anim;
     // Start is called before the first frame update
