@@ -17,7 +17,7 @@ public class TrapBehavior : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         // Verifica se o objeto que entrou é um inimigo
-        if (!isActivated && collision.CompareTag("Enemy"))
+        if (!isActivated && collision.CompareTag("Inimigo"))
         {
             isActivated = true; // Marca a armadilha como ativada
 

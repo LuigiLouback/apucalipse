@@ -8,6 +8,7 @@ public class Mascote : MonoBehaviour
     public GameObject trapPrefab; // Prefab da armadilha
     public Transform trapSpawnPoint; // Local onde a armadilha será colocada
     public float trapCooldown = 3f; // Tempo entre cada armadilha
+     [SerializeField] private ParticleSystem cura;
 
     // Atributos para máquina de estados
     public float healThreshold = 30f; // Vida mínima do jogador para curar
@@ -26,6 +27,8 @@ public class Mascote : MonoBehaviour
     private float trapTimer = 0f; // Contador para o cooldown das armadilhas
     private Vector3 lastPosition; // Posição anterior do mascote
     private Vector3 currentDirection; // Direção do movimento do mascote
+    private Animator animator;
+    private Vector3 velocidade;
 
     // Enum para a máquina de estados
     public enum MascoteState
@@ -37,6 +40,7 @@ public class Mascote : MonoBehaviour
 
     void Start()
     {
+        animator = GetComponent<Animator>();
         lastPosition = transform.position; // Inicializa a posição anterior
         currentDirection = Vector3.right; // Direção inicial
         currentState = MascoteState.FollowingPlayer; // Estado inicial
@@ -45,6 +49,7 @@ public class Mascote : MonoBehaviour
 
     void Update()
     {
+        
 
         healTimer += Time.deltaTime;
         attackTimer += Time.deltaTime;
@@ -62,6 +67,7 @@ public class Mascote : MonoBehaviour
 
             case MascoteState.Healing:
                 HealPlayer();
+                cura.Play();
                 break;
 
             case MascoteState.Attacking:
@@ -72,9 +78,30 @@ public class Mascote : MonoBehaviour
 
     void FollowPlayer()
     {
-        // Calcula a posição desejada para o mascote, baseada no jogador
-        Vector3 targetPosition = player.position + new Vector3(followDistance, 0, 0); // Mantém uma distância fixa no eixo X
-        transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+     float direction = Input.GetAxisRaw("Horizontal"); // -1 para esquerda, 1 para direita
+
+    // Calcula a posição alvo baseada na direção do jogador
+    Vector3 offset = new Vector3(direction > 0 ? -followDistance : followDistance, 0, 0);
+    Vector3 targetPosition = player.position + offset;
+
+    // Calcula a velocidade (deslocamento por frame)
+    velocidade = (targetPosition - transform.position) / Time.deltaTime;
+
+    // Verifica se o mascote está se movendo
+    bool isMoving = velocidade.sqrMagnitude > 0.01f; // Usa sqrMagnitude para evitar cálculos desnecessários
+    this.animator.SetBool("andando", isMoving);
+
+    if (direction != 0) // Só atualiza a orientação se houver movimento do jogador
+    {
+        // Atualiza a escala no eixo X para flipar a sprite
+        Vector3 scale = transform.localScale;
+        scale.x = Mathf.Abs(scale.x) * (direction > 0 ? 1 : -1); // Direita: positivo, Esquerda: negativo
+        transform.localScale = scale;
+    }
+
+    // Move o mascote suavemente para a posição alvo
+    transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
+    
     }
 
     void UpdateTrapSpawnPoint()
