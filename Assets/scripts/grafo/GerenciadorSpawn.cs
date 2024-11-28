@@ -10,7 +10,7 @@ public class GerenciadorSpawn : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("SpawnEnemies", 0.5f, 3.0f);
+        InvokeRepeating("SpawnEnemies", 0.5f, 1.0f);
     }
 
     private void SpawnEnemies()

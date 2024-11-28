@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14a0fd803a6281e4a827743812074b05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
+  speed: 7
   spriteRenderer: {fileID: 591446478852572746}
 --- !u!114 &578942477283007338
 MonoBehaviour:
@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8a2daf213d7cd94f8e5c194161589da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vidaInimigo: 30
+  vidaInimigo: 60
   xpRecompensa: 5
   particulasDano: {fileID: -8521868238175861666}
 --- !u!198 &-8521868238175861666
