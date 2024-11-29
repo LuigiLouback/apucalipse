@@ -65461,6 +65461,8 @@ GameObject:
   - component: {fileID: 1357902965}
   - component: {fileID: 1357902969}
   - component: {fileID: 1357902970}
+  - component: {fileID: 1357902972}
+  - component: {fileID: 1357902973}
   m_Layer: 0
   m_Name: Mascote
   m_TagString: Untagged
@@ -65480,19 +65482,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97362850e09348a4c877e10d8dce3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1178872853}
   followDistance: 2
-  speed: 3
+  speed: 11
   trapPrefab: {fileID: 784605452}
   trapSpawnPoint: {fileID: 494101147}
   trapCooldown: 3
-  cura: {fileID: 956011154}
+  cura: {fileID: 0}
   healThreshold: 50
   healAmount: 20
   attackRange: 2
   damageAmount: 10
   healCooldown: 5
   attackCooldown: 3
+  spriteRenderer: {fileID: 1357902969}
 --- !u!61 &1357902966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65629,6 +65631,47 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &1357902972
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357902964}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1357902973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1357902964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0828228c07d11ce408e6bae3deba7c84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seeker: {fileID: 1357902968}
+  target: {fileID: 1178872853}
 --- !u!1 &1372337026
 GameObject:
   m_ObjectHideFlags: 0

@@ -61,8 +61,6 @@ public class Mascote : MonoBehaviour
         pathfinding = GetComponent<Pathfinding2>(); // Obtém o Pathfinding
         rigidbody = GetComponent<Rigidbody2D>();
 
-        
-
     }
 
     void Update()
@@ -132,7 +130,7 @@ public class Mascote : MonoBehaviour
             }
 
             // Atualiza a animação
-            anim.SetBool("movendo", true);
+            anim.SetBool("andando", true);
             
             
         }
