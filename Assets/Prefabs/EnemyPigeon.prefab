@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7993285605019004522}
   - component: {fileID: 591446478852572746}
-  - component: {fileID: -5197584818526096003}
   - component: {fileID: 578942477283007338}
   - component: {fileID: 6562709262666079675}
   - component: {fileID: 2026595480012711813}
@@ -19,6 +18,7 @@ GameObject:
   - component: {fileID: 1972040414882181098}
   - component: {fileID: -8521868238175861666}
   - component: {fileID: -2837483397732371301}
+  - component: {fileID: -8258446042574076530}
   m_Layer: 0
   m_Name: EnemyPigeon
   m_TagString: Inimigo
@@ -93,20 +93,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5197584818526096003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7370046126565063945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14a0fd803a6281e4a827743812074b05, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 7
-  spriteRenderer: {fileID: 591446478852572746}
 --- !u!114 &578942477283007338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5098,3 +5084,17 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &-8258446042574076530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7370046126565063945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9d554ebea7eb714b8d2a1d76180c74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 7
+  spriteRenderer: {fileID: 591446478852572746}

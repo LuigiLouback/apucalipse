@@ -38,6 +38,8 @@ public class Mascote : MonoBehaviour
     private Rigidbody2D rigidbody;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Animator anim;
+    public GameObject lightObject; // Referência ao GameObject que contém a luz
+
 
 
 
@@ -93,6 +95,7 @@ public class Mascote : MonoBehaviour
     void FollowPlayer()
     {
         // Calcular caminho até o jogador usando Pathfinding
+        
         pathfinding.FindPath(transform.position, player.transform.position);
         path = GridManager.grid.path; // Obtém o caminho calculado do GridManager
 
@@ -118,19 +121,23 @@ public class Mascote : MonoBehaviour
             }
 
             Vector2 direction = (player.transform.position - transform.position).normalized;
-
+          Vector2 direction2 = currentDirection;
             // Ajusta a orientação do sprite
-            if (direction.x > 0)
-            {
-                spriteRenderer.flipX = false;
-            }
-            else if (direction.x < 0)
-            {
-                spriteRenderer.flipX = true;
-            }
-
-            // Atualiza a animação
-            anim.SetBool("andando", true);
+       if (direction.x > 0) // Se o mascote estiver indo para a direita
+        {
+            lightObject.transform.localPosition = new Vector2(Mathf.Abs(lightObject.transform.localPosition.x), lightObject.transform.localPosition.y);
+           lightObject.transform.rotation = Quaternion.Euler(0, 0, 270);
+            spriteRenderer.flipX = false; // Ajusta o sprite
+        }
+        else if (direction.x < 0) // Se o mascote estiver indo para a esquerda
+        {
+            lightObject.transform.localPosition = new Vector2(-Mathf.Abs(lightObject.transform.localPosition.x), lightObject.transform.localPosition.y);
+            lightObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+            spriteRenderer.flipX = true; // Ajusta o sprite
+        }
+        
+      
+        
             
             
         }

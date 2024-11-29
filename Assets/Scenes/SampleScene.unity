@@ -3381,13 +3381,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 725632008}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.71755546, w: 0.6965014}
-  m_LocalPosition: {x: 0.51, y: 0.22, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0.6905081, w: 0.72332466}
+  m_LocalPosition: {x: 0.6, y: 0.22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1357902968}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -91.32}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -87.341}
 --- !u!114 &725632010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65482,12 +65482,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97362850e09348a4c877e10d8dce3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followDistance: 2
+  followDistance: 20
   speed: 11
   trapPrefab: {fileID: 784605452}
   trapSpawnPoint: {fileID: 494101147}
   trapCooldown: 3
-  cura: {fileID: 0}
+  cura: {fileID: 956011154}
   healThreshold: 50
   healAmount: 20
   attackRange: 2
@@ -65495,6 +65495,7 @@ MonoBehaviour:
   healCooldown: 5
   attackCooldown: 3
   spriteRenderer: {fileID: 1357902969}
+  lightObject: {fileID: 725632008}
 --- !u!61 &1357902966
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65657,7 +65658,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1357902973
 MonoBehaviour:
   m_ObjectHideFlags: 0
