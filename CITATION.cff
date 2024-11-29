@@ -1,0 +1,45 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Apucalipse
+authors:
+  - family-names: Rezende Aguiar
+    given-names: Thiago
+  - family-names: Louback de Oliveira
+    given-names: Luigi
+  - family-names: Araújo Valadares Silva
+    given-names: Eduardo
+  - family-names: de Castro Notini
+    given-names: Caio
+  - family-names: Resende Lara
+    given-names: Henrique
+  - family-names: Drummond Macedo
+    given-names: Rodrigo 
+  - family-names: Neuenschwander Maciel Baron
+    given-names: Thomas 
+  - family-names: Lascasas Antunes
+    given-names: Tiago 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Martins Mol
+    given-names: Artur
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Neri Nobre
+    given-names: Cristiane
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Neves Rodrigues
+    given-names: Cristiano
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Ribeiro da Mota
+    given-names: Rosilane
+keywords:
+  - Top Down Shooter
+  - Unity 2D
+  - Apocalipse
+  - Game
+repository-code: https://github.com/ICEI-PUC-Minas-CC-TI/plmg-cc-ti4-2024-2-g03-apucalipse
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2022-07-14
