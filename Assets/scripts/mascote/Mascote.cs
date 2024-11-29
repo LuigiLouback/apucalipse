@@ -1,14 +1,16 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
 public class Mascote : MonoBehaviour
 {
-    public Transform player; // Referência ao jogador
+    private GameObject player; // Referência ao jogador
     public float followDistance = 2f; // Distância para seguir o jogador
-    public float speed = 3f; // Velocidade do mascote
+    [SerializeField] private float speed;
     public GameObject trapPrefab; // Prefab da armadilha
     public Transform trapSpawnPoint; // Local onde a armadilha será colocada
     public float trapCooldown = 3f; // Tempo entre cada armadilha
-     [SerializeField] private ParticleSystem cura;
+    [SerializeField] private ParticleSystem cura;
+
 
     // Atributos para máquina de estados
     public float healThreshold = 30f; // Vida mínima do jogador para curar
@@ -28,7 +30,17 @@ public class Mascote : MonoBehaviour
     private Vector3 lastPosition; // Posição anterior do mascote
     private Vector3 currentDirection; // Direção do movimento do mascote
     private Animator animator;
-    private Vector3 velocidade;
+
+    // Para o pathfinding
+    private Pathfinding2 pathfinding;
+    private List<Node> path;
+    private int targetIndex = 0;
+    private Rigidbody2D rigidbody;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private Animator anim;
+
+
+
 
     // Enum para a máquina de estados
     public enum MascoteState
@@ -41,16 +53,20 @@ public class Mascote : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
+        player = GameObject.FindWithTag("Player"); // Inicializa a referência ao jogador usando a tag "Player"
         lastPosition = transform.position; // Inicializa a posição anterior
         currentDirection = Vector3.right; // Direção inicial
         currentState = MascoteState.FollowingPlayer; // Estado inicial
         sistemaVida = player.GetComponent<SistemaVida>(); // Obtém o componente SistemaVida do jogador
+        pathfinding = GetComponent<Pathfinding2>(); // Obtém o Pathfinding
+        rigidbody = GetComponent<Rigidbody2D>();
+
+        
+
     }
 
     void Update()
     {
-        
-
         healTimer += Time.deltaTime;
         attackTimer += Time.deltaTime;
         trapTimer += Time.deltaTime;
@@ -58,7 +74,7 @@ public class Mascote : MonoBehaviour
         switch (currentState)
         {
             case MascoteState.FollowingPlayer:
-                FollowPlayer();
+                InvokeRepeating("FollowPlayer", 0f, 3f);
                 UpdateTrapSpawnPoint();
                 HandleTrapPlacement();
                 CheckForNearbyEnemies();
@@ -78,30 +94,48 @@ public class Mascote : MonoBehaviour
 
     void FollowPlayer()
     {
-     float direction = Input.GetAxisRaw("Horizontal"); // -1 para esquerda, 1 para direita
+        // Calcular caminho até o jogador usando Pathfinding
+        pathfinding.FindPath(transform.position, player.transform.position);
+        path = GridManager.grid.path; // Obtém o caminho calculado do GridManager
 
-    // Calcula a posição alvo baseada na direção do jogador
-    Vector3 offset = new Vector3(direction > 0 ? -followDistance : followDistance, 0, 0);
-    Vector3 targetPosition = player.position + offset;
+        if (path != null && player != null && path.Count > 0)
+        {
+            // Seguir o caminho
+            Node currentNode = path[targetIndex];
+            Vector2 targetPosition = new Vector2(currentNode.worldPosition.x, currentNode.worldPosition.y);
+            Vector2 currentPosition = rigidbody.position;
+            Vector2 newPosition = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
+            rigidbody.MovePosition(newPosition);
 
-    // Calcula a velocidade (deslocamento por frame)
-    velocidade = (targetPosition - transform.position) / Time.deltaTime;
 
-    // Verifica se o mascote está se movendo
-    bool isMoving = velocidade.sqrMagnitude > 0.01f; // Usa sqrMagnitude para evitar cálculos desnecessários
-    this.animator.SetBool("andando", isMoving);
+            // Verifica se o mascote alcançou o próximo nó
+            if (Vector2.Distance(currentPosition, targetPosition) < 0.3f)
+            {
+                targetIndex++;
+                if (targetIndex >= path.Count)
+                {
+                    targetIndex = 0;
+                    path=null;
+                }
+            }
 
-    if (direction != 0) // Só atualiza a orientação se houver movimento do jogador
-    {
-        // Atualiza a escala no eixo X para flipar a sprite
-        Vector3 scale = transform.localScale;
-        scale.x = Mathf.Abs(scale.x) * (direction > 0 ? 1 : -1); // Direita: positivo, Esquerda: negativo
-        transform.localScale = scale;
-    }
+            Vector2 direction = (player.transform.position - transform.position).normalized;
 
-    // Move o mascote suavemente para a posição alvo
-    transform.position = Vector3.Lerp(transform.position, targetPosition, speed * Time.deltaTime);
-    
+            // Ajusta a orientação do sprite
+            if (direction.x > 0)
+            {
+                spriteRenderer.flipX = false;
+            }
+            else if (direction.x < 0)
+            {
+                spriteRenderer.flipX = true;
+            }
+
+            // Atualiza a animação
+            anim.SetBool("movendo", true);
+            
+            
+        }
     }
 
     void UpdateTrapSpawnPoint()
@@ -194,22 +228,21 @@ public class Mascote : MonoBehaviour
     }
 
     void AttackEnemy()
-{
-    if (closestEnemy != null)
     {
-        // Obtém o componente VidaInimigo do inimigo
-        VidaInimigo enemyHealth = closestEnemy.GetComponent<VidaInimigo>();
-
-        if (enemyHealth != null)
+        if (closestEnemy != null)
         {
-            // Aplica dano ao inimigo
-            enemyHealth.PerderVida(damageAmount); // A função PerderVida aplica o dano
-            Debug.Log("Mascote atacou o inimigo!");
+            // Obtém o componente VidaInimigo do inimigo
+            VidaInimigo enemyHealth = closestEnemy.GetComponent<VidaInimigo>();
 
-            // Volta para o estado de seguir o jogador após atacar
-            currentState = MascoteState.FollowingPlayer; 
+            if (enemyHealth != null)
+            {
+                // Aplica dano ao inimigo
+                enemyHealth.PerderVida(damageAmount); // A função PerderVida aplica o dano
+                Debug.Log("Mascote atacou o inimigo!");
+
+                // Volta para o estado de seguir o jogador após atacar
+                currentState = MascoteState.FollowingPlayer; 
+            }
         }
     }
-}
-
 }
