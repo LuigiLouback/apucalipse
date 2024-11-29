@@ -22,7 +22,7 @@ public class Inimigo : MonoBehaviour
         rigidbody = GetComponent<Rigidbody2D>();
         pathfinding = GetComponent<Pathfinding>();
 
-        InvokeRepeating("AtualizarCaminho", 0f, 3f);
+        InvokeRepeating("AtualizarCaminho", 0f, 2f);
     }
 
     void AtualizarCaminho()
