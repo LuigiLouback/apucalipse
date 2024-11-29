@@ -65482,8 +65482,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97362850e09348a4c877e10d8dce3f55, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followDistance: 20
-  speed: 11
+  followDistance: 13
+  speed: 12
   trapPrefab: {fileID: 784605452}
   trapSpawnPoint: {fileID: 494101147}
   trapCooldown: 3
@@ -65496,6 +65496,7 @@ MonoBehaviour:
   attackCooldown: 3
   spriteRenderer: {fileID: 1357902969}
   lightObject: {fileID: 725632008}
+  stateUpdateInterval: 0.5
 --- !u!61 &1357902966
 BoxCollider2D:
   m_ObjectHideFlags: 0

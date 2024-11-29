@@ -3,32 +3,31 @@ using System.Collections.Generic;
 using UnityEngine;
 public class Mascote : MonoBehaviour
 {
-    private GameObject player; // Referência ao jogador
-    public float followDistance = 2f; // Distância para seguir o jogador
+    private GameObject player; 
+    public float followDistance = 2f; 
     [SerializeField] private float speed;
-    public GameObject trapPrefab; // Prefab da armadilha
-    public Transform trapSpawnPoint; // Local onde a armadilha será colocada
-    public float trapCooldown = 3f; // Tempo entre cada armadilha
+    public GameObject trapPrefab; 
+    public Transform trapSpawnPoint;
+    public float trapCooldown = 3f; 
     [SerializeField] private ParticleSystem cura;
 
+    // Atributos da máquina de estados
+    public float healThreshold = 30f; 
+    public float healAmount = 20f; 
+    public float attackRange = 1f;
+    public float damageAmount = 1f;
+    private MascoteState currentState;
+    private GameObject closestEnemy;
+    private SistemaVida sistemaVida;
 
-    // Atributos para máquina de estados
-    public float healThreshold = 30f; // Vida mínima do jogador para curar
-    public float healAmount = 20f; // Quantidade de cura
-    public float attackRange = 1f; // Distância para atacar um inimigo
-    public float damageAmount = 5f; // Dano do mascote
-    private MascoteState currentState; // Estado atual do mascote
-    private GameObject closestEnemy; // Referência ao inimigo mais próximo
-    private SistemaVida sistemaVida; // Referência ao SistemaVida do jogador
+    public float healCooldown = 5f;
+    public float attackCooldown = 3f;
+    private float healTimer = 0f;
+    private float attackTimer = 0f;
+    private float trapTimer = 0f;
 
-    public float healCooldown = 5f; // Tempo de cooldown entre curas
-    public float attackCooldown = 3f; // Tempo de cooldown entre ataques
-    private float healTimer = 0f; // Timer para controle do cooldown de cura
-    private float attackTimer = 0f; // Timer para controle do cooldown de ataque
-
-    private float trapTimer = 0f; // Contador para o cooldown das armadilhas
-    private Vector3 lastPosition; // Posição anterior do mascote
-    private Vector3 currentDirection; // Direção do movimento do mascote
+    private Vector3 lastPosition;
+    private Vector3 currentDirection;
     private Animator animator;
 
     // Para o pathfinding
@@ -38,13 +37,13 @@ public class Mascote : MonoBehaviour
     private Rigidbody2D rigidbody;
     [SerializeField] private SpriteRenderer spriteRenderer;
     private Animator anim;
-    public GameObject lightObject; // Referência ao GameObject que contém a luz
+    public GameObject lightObject;
 
+    // Intervalo de atualização de estado
+    private float stateUpdateTimer = 0f;
+    public float stateUpdateInterval = 0.5f;  // Atualiza a cada 0.5 segundos
 
-
-
-
-    // Enum para a máquina de estados
+    // Enum da máquina de estados
     public enum MascoteState
     {
         FollowingPlayer, // Seguir o jogador
@@ -55,100 +54,108 @@ public class Mascote : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        player = GameObject.FindWithTag("Player"); // Inicializa a referência ao jogador usando a tag "Player"
-        lastPosition = transform.position; // Inicializa a posição anterior
-        currentDirection = Vector3.right; // Direção inicial
-        currentState = MascoteState.FollowingPlayer; // Estado inicial
-        sistemaVida = player.GetComponent<SistemaVida>(); // Obtém o componente SistemaVida do jogador
-        pathfinding = GetComponent<Pathfinding2>(); // Obtém o Pathfinding
+        player = GameObject.FindWithTag("Player");
+        lastPosition = transform.position;
+        currentDirection = Vector3.right;
+        currentState = MascoteState.FollowingPlayer; 
+        sistemaVida = player.GetComponent<SistemaVida>();
+        pathfinding = GetComponent<Pathfinding2>(); 
         rigidbody = GetComponent<Rigidbody2D>();
-
     }
 
     void Update()
     {
+        // Atualiza os timers de cooldown
         healTimer += Time.deltaTime;
         attackTimer += Time.deltaTime;
         trapTimer += Time.deltaTime;
 
-        switch (currentState)
+        // Atualiza o timer para trocar de estado
+        stateUpdateTimer += Time.deltaTime;
+
+        // Verifica e executa a lógica de seguir o jogador continuamente
+        FollowPlayer();
+
+        // Atualiza o estado a cada intervalo de tempo
+        if (stateUpdateTimer >= stateUpdateInterval)
         {
-            case MascoteState.FollowingPlayer:
-                InvokeRepeating("FollowPlayer", 0f, 3f);
-                UpdateTrapSpawnPoint();
-                HandleTrapPlacement();
-                CheckForNearbyEnemies();
-                CheckPlayerHealth();
-                break;
+            // Reseta o timer de atualização de estado
+            stateUpdateTimer = 0f;
 
-            case MascoteState.Healing:
-                HealPlayer();
-                cura.Play();
-                break;
+            // Verifica a necessidade de curar ou atacar
+            CheckForNearbyEnemies();
+            CheckPlayerHealth();
 
-            case MascoteState.Attacking:
-                AttackEnemy();
-                break;
+            // Realiza ações baseadas no estado
+            switch (currentState)
+            {
+                case MascoteState.FollowingPlayer:
+                    // O mascote já está seguindo o jogador, não há necessidade de ações adicionais
+                    break;
+                case MascoteState.Healing:
+                    HealPlayer();
+                    break;
+                case MascoteState.Attacking:
+                    AttackEnemy();
+                    break;
+            }
+
+            // Atualiza a posição do ponto de spawn da armadilha
+            UpdateTrapSpawnPoint();
+
+            // Atualiza e lida com as armadilhas
+            HandleTrapPlacement();
         }
     }
 
     void FollowPlayer()
     {
         // Calcular caminho até o jogador usando Pathfinding
-        
         pathfinding.FindPath(transform.position, player.transform.position);
-        path = GridManager.grid.path; // Obtém o caminho calculado do GridManager
+        path = GridManager.grid.path;
 
-        if (path != null && player != null && path.Count > 0)
+        if (path != null && path.Count > 0)
         {
-            // Seguir o caminho
             Node currentNode = path[targetIndex];
             Vector2 targetPosition = new Vector2(currentNode.worldPosition.x, currentNode.worldPosition.y);
             Vector2 currentPosition = rigidbody.position;
             Vector2 newPosition = Vector2.MoveTowards(currentPosition, targetPosition, speed * Time.deltaTime);
             rigidbody.MovePosition(newPosition);
 
-
-            // Verifica se o mascote alcançou o próximo nó
+            // Se o mascote alcançar o próximo nó
             if (Vector2.Distance(currentPosition, targetPosition) < 0.3f)
             {
                 targetIndex++;
                 if (targetIndex >= path.Count)
                 {
                     targetIndex = 0;
-                    path=null;
+                    path = null;
                 }
             }
 
+            // Ajusta a direção do sprite
             Vector2 direction = (player.transform.position - transform.position).normalized;
-          Vector2 direction2 = currentDirection;
-            // Ajusta a orientação do sprite
-       if (direction.x > 0) // Se o mascote estiver indo para a direita
-        {
-            lightObject.transform.localPosition = new Vector2(Mathf.Abs(lightObject.transform.localPosition.x), lightObject.transform.localPosition.y);
-           lightObject.transform.rotation = Quaternion.Euler(0, 0, 270);
-            spriteRenderer.flipX = false; // Ajusta o sprite
-        }
-        else if (direction.x < 0) // Se o mascote estiver indo para a esquerda
-        {
-            lightObject.transform.localPosition = new Vector2(-Mathf.Abs(lightObject.transform.localPosition.x), lightObject.transform.localPosition.y);
-            lightObject.transform.rotation = Quaternion.Euler(0, 0, 90);
-            spriteRenderer.flipX = true; // Ajusta o sprite
-        }
-        
-      
-        
-            
-            
+            if (direction.x > 0)
+            {
+                lightObject.transform.localPosition = new Vector2(Mathf.Abs(lightObject.transform.localPosition.x), lightObject.transform.localPosition.y);
+                lightObject.transform.rotation = Quaternion.Euler(0, 0, 270);
+                spriteRenderer.flipX = false;
+            }
+            else if (direction.x < 0)
+            {
+                lightObject.transform.localPosition = new Vector2(-Mathf.Abs(lightObject.transform.localPosition.x), lightObject.transform.localPosition.y);
+                lightObject.transform.rotation = Quaternion.Euler(0, 0, 90);
+                spriteRenderer.flipX = true;
+            }
         }
     }
 
     void UpdateTrapSpawnPoint()
     {
-        // Calcula a direção do movimento
+        // Atualiza a direção do mascote
         currentDirection = (transform.position - lastPosition).normalized;
 
-        // Atualiza o TrapSpawnPoint para ficar na frente do mascote
+        // Atualiza a posição do TrapSpawnPoint para ficar na frente do mascote
         if (currentDirection != Vector3.zero)
         {
             trapSpawnPoint.localPosition = currentDirection * 1f; // 1 unidade na frente do mascote
@@ -203,7 +210,6 @@ public class Mascote : MonoBehaviour
             }
         }
 
-        // Se o inimigo estiver perto o suficiente, mudar para o estado de ataque
         if (closestEnemy != null)
         {
             currentState = MascoteState.Attacking;
@@ -213,22 +219,22 @@ public class Mascote : MonoBehaviour
 
     void CheckPlayerHealth()
     {
-        // Verifique a vida do jogador. Supondo que o jogador tenha uma variável de vida pública
         if (sistemaVida != null && sistemaVida.vida < sistemaVida.vidaMax * (healThreshold / 100f))
         {
-            currentState = MascoteState.Healing; // Se a vida do jogador estiver baixa, curar
-            healTimer = 0f;
+            if (healTimer >= healCooldown)
+            {
+                currentState = MascoteState.Healing;
+                healTimer = 0f;
+            }
         }
     }
 
     void HealPlayer()
     {
-        // Curando o jogador
         if (sistemaVida != null)
         {
-            sistemaVida.PerderVida(-healAmount); // Passa valor negativo para curar
-            Debug.Log("Mascote curou o jogador!");
-            currentState = MascoteState.FollowingPlayer; // Voltar ao estado de seguir o jogador
+            sistemaVida.PerderVida(-healAmount); // Cura o jogador
+            currentState = MascoteState.FollowingPlayer; // Volta para seguir o jogador após curar
         }
     }
 
@@ -236,17 +242,11 @@ public class Mascote : MonoBehaviour
     {
         if (closestEnemy != null)
         {
-            // Obtém o componente VidaInimigo do inimigo
             VidaInimigo enemyHealth = closestEnemy.GetComponent<VidaInimigo>();
-
             if (enemyHealth != null)
             {
-                // Aplica dano ao inimigo
-                enemyHealth.PerderVida(damageAmount); // A função PerderVida aplica o dano
-                Debug.Log("Mascote atacou o inimigo!");
-
-                // Volta para o estado de seguir o jogador após atacar
-                currentState = MascoteState.FollowingPlayer; 
+                enemyHealth.PerderVida(damageAmount); // Aplica dano
+                currentState = MascoteState.FollowingPlayer; // Volta para seguir o jogador após atacar
             }
         }
     }
