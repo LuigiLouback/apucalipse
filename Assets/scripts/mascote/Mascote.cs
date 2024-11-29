@@ -93,6 +93,7 @@ public class Mascote : MonoBehaviour
                     // O mascote já está seguindo o jogador, não há necessidade de ações adicionais
                     break;
                 case MascoteState.Healing:
+                cura.Play();
                     HealPlayer();
                     break;
                 case MascoteState.Attacking:
