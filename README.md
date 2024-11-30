@@ -24,4 +24,4 @@ Como o único sobrevivente desse apocalipse urbano, sua missão é clara: lutar 
 
 ## Instruções de utilização
 
-[Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.]
+Para utilizar o sistema, basta acessar a pasta Build e localizar o arquivo apucalipse.exe, que é o executável principal. Além disso, na pasta "Código" você encontrará os seguintes elementos: a pasta Assets, que contém todos os recursos utilizados no desenvolvimento, como scripts, modelos, texturas e outros itens necessários para a execução do jogo no Unity; a pasta Packages, que inclui as dependências gerenciadas pelo Unity, como bibliotecas e ferramentas necessárias para o funcionamento do projeto; e a pasta ProjectSettings, que armazena as configurações do projeto, como qualidade gráfica, entradas de controle e outras definições. Esse conjunto de pastas pode ser aberto diretamente no Unity Editor para realizar ajustes, testar funcionalidades ou desenvolver novas versões.
